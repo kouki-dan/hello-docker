@@ -9,8 +9,21 @@ services:
       - "5000:5000"
     volumes:
       - ./:/app
+    networks:
+      - back
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - back
 
 volumes:
   data:
     driver: local
+
+networks:
+  back:
+    driver: bridge
 

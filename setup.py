@@ -8,6 +8,7 @@ setup(
     test_suite="test",
     install_requires=[
         "flask",
+        "redis",
     ],
 )
 
